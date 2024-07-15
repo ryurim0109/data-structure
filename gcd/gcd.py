@@ -1,5 +1,11 @@
-# gcd(a,b):
-#   while a != 0 and b !=0
-#     if a>b : a
+def gcd(a, b):
+    while a != 0 and b != 0:
+        if a > b:
+            a = a % b
+        else:
+            b = b % a
+    return a + b
 
-print('hello world')
+
+
+print(gcd(8, 4))
