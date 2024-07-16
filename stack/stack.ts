@@ -1,40 +1,3 @@
-# 스택
-
-```py
-class Stack:
-  def __init__(self):
-    # 생성 함수 데이터 저장을 위한 리스트 준비
-    self.items =[]
-  def push(self,val):
-    # O(1)
-    self.items.append(val)
-  def pop(self):
-    try:
-      return self.items.pop()
-    except:
-        print("Stack is empty")
-  def top(self):
-    try:
-      return self.items[-1]
-    except:
-        print("Stack is empty")
-  def __len__(self):
-    return len(self.items)
-
-
-
-S = Stack()
-S.push(10)
-S.push(2)
-print(S.pop())  # 2
-print(S.top())  # 10
-print(len(S))   # 1
-
-```
-
----
-
-```ts
 interface IStack<T> {
   push(item: T): void;
   pop(): T | undefined;
@@ -71,12 +34,10 @@ class Stack<T> implements IStack<T> {
 const stack = new Stack<string>();
 stack.push('A');
 stack.push('B');
+stack.push('C');
+stack.push('D');
+stack.push('E');
 
-console.log(stack.size()); // 2
-console.log(stack.top()); // 'B'
-```
-
-```
- npm install -g ts-node
- ts-node stack.ts
-```
+console.log(stack.size()); // 5
+console.log(stack.top()); // 'E'
+console.log(stack.pop()); // 'E'
