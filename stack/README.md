@@ -1,5 +1,8 @@
 # 스택
 
+- 말미잘 입으로 먹고 입으로 배출
+- LIFO
+
 ```py
 class Stack:
   def __init__(self):
@@ -80,3 +83,10 @@ console.log(stack.top()); // 'B'
  npm install -g ts-node
  ts-node stack.ts
 ```
+
+---
+
+## 활용 예제
+
+1. 괄호 맞추기
+2. 계산기
