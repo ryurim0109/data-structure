@@ -20,9 +20,9 @@ class Stack:
 
 
 
-S = Stack()
-S.push(10)
-S.push(2)
-print(S.pop())  # 2
-print(S.top())  # 10
-print(len(S))   # 1
+# S = Stack()
+# S.push(10)
+# S.push(2)
+# print(S.pop())  # 2
+# print(S.top())  # 10
+# print(len(S))   # 1
