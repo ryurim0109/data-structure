@@ -4,7 +4,7 @@ const rl = readline.createInterface({
   input: process.stdin,
   output: process.stdout,
 });
-
+//전투
 const input = [];
 let w, h;
 rl.on('line', (line) => {
