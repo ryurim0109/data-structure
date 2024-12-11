@@ -17,6 +17,10 @@ const rl = readline.createInterface({
 출력
 세준이가 운전해야하는 거리의 최솟값을 출력하시오.
  */
-rl.on('line', (line) => {}).on('close', () => {
+const input = [];
+rl.on('line', (line) => {
+  input.push(line.split(' ').map(Number));
+}).on('close', () => {
+  console.log(input);
   process.exit();
 });
