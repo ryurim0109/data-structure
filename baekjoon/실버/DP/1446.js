@@ -21,6 +21,30 @@ const input = [];
 rl.on('line', (line) => {
   input.push(line.split(' ').map(Number));
 }).on('close', () => {
-  console.log(input);
+  const [[s, e], ...list] = input;
+
+  const map = {};
+  for (let i = 0; i < list.length; i++) {
+    const [start, end, cost] = list[i];
+    if (!map[end]) {
+      map[end] = [];
+    }
+    map[end].push([start, cost]);
+  }
+
+  const DP = Array(e + 1).fill(0);
+
+  for (let i = 1; i <= e; i++) {
+    const costs = [];
+    if (map[i]) {
+      for (let j = 0; j < map[i].length; j++) {
+        const [start, cost] = map[i][j];
+        costs.push(DP[start] + cost);
+      }
+    }
+    DP[i] = Math.min(...costs, DP[i - 1] + 1);
+  }
+
+  console.log(DP.pop());
   process.exit();
 });
