@@ -1,14 +1,14 @@
 const readline = require('readline');
 
 const rl = readline.createInterface({
-  input:process.stdin,
-  output:process.stdout,
-})
+  input: process.stdin,
+  output: process.stdout,
+});
 
-rl.on('line',(line)=>{
+rl.on('line', (line) => {
+  const [A, B] = line.split(' ').map(Number);
 
-
-
-}).on('close',()=>{
-  process.exit()
-})
+  console.log(A / B);
+}).on('close', () => {
+  process.exit();
+});
