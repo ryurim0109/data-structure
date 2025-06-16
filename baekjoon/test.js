@@ -4,6 +4,8 @@ const rl = readline.createInterface({
   output: process.stdout,
 });
 
+// https://www.acmicpc.net/problem/2252
+// 줄 세우기
 rl.on('line', (line) => {}).on('close', () => {
   process.exit();
 });
