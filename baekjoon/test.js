@@ -4,8 +4,18 @@ const rl = readline.createInterface({
   output: process.stdout,
 });
 
-// https://www.acmicpc.net/problem/2252
-// 줄 세우기
-rl.on('line', (line) => {}).on('close', () => {
+// https://www.acmicpc.net/problem/13460
+// 구슬탈출  2
+let N, M;
+const graph = [];
+rl.on('line', (line) => {
+  if (!N) {
+    [N, M] = line.split(' ').map(Number);
+    return;
+  }
+  graph.push(line.split(''));
+}).on('close', () => {
+  console.log(N, M);
+  console.log(graph);
   process.exit();
 });
